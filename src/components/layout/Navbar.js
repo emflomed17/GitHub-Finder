@@ -1,23 +1,21 @@
 import React from "react";
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 
 const Navbar = (props) => {
     return (
       <nav>
         <div className="nav-wrapper">
-          <a href="http://localhost:3000/" className="brand-logo">
+          <Link to="/" className="brand-logo">
           <i className={props.icon}></i> {props.title}
-          </a>
+          </Link>
           <ul id="nav-mobile" className="right hide-on-med-and-down">
             <li>
-              <a href="http://localhost:3000/">Sass</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="http://localhost:3000/">Components</a>
-            </li>
-            <li>
-              <a href="http://localhost:3000/">JavaScript</a>
+              <Link to="/about">About</Link>
             </li>
           </ul>
         </div>

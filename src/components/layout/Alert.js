@@ -1,14 +1,18 @@
-import React from 'react';
-import swal from '@sweetalert/with-react';
+import React, { useContext } from 'react';
+import AlertContext from '../../context/alert/alertContext';
 
-const Alert = ({ alert }) => {
+const Alert = () => {
+    const alertContext = useContext(AlertContext);
+
+    const { alert } = alertContext;
+
     return (
         alert !== null && (
             <div>
-                {window.alert('eeee')}
+                {window.alert('Hey you need to type something!')}
             </div>
         )
     )
 }
 
-export default Alert
+export default Alert;
